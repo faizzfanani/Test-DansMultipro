@@ -1,0 +1,3 @@
+include ':jobsSDK'
+include ':app'
+rootProject.name = "Code Test - Dans Multipro"

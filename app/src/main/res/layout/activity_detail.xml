@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_light"
+    tools:context=".ui.DetailActivity">
+    <androidx.cardview.widget.CardView
+        style="@style/container_cardview"
+        android:layout_marginTop="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container_image"
+                style="@style/container_cardview"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/detail_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        style="@style/container_cardview"
+        android:layout_margin="8dp"
+        android:layout_below="@id/container_image"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/detail_name"
+                style="@style/textview_title"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_job_title"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/container1"
+                style="@style/container_cardview"
+                android:layout_below="@id/detail_name"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            style="@style/textview_label"
+                            android:text="@string/label_company" />
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/container_cardview"
+                            android:layout_width="wrap_content">
+
+                            <TextView
+                                android:id="@+id/detail_company"
+                                style="@style/textview_label"
+                                android:layout_margin="5dp" />
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/detail_companyUrl"
+                            style="@style/container_cardview"
+                            android:layout_width="wrap_content">
+
+                            <TextView
+                                style="@style/textview_label"
+                                android:layout_margin="5dp"
+                                android:textColor="@color/blue_light"
+                                android:text="@string/label_go_to_website"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/textview_label"
+                            android:text="@string/label_job_type" />
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/container_cardview"
+                            android:layout_width="wrap_content">
+
+                            <TextView
+                                android:id="@+id/detail_type"
+                                style="@style/textview_label"
+                                android:layout_margin="5dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/textview_label"
+                            android:text="@string/label_location" />
+
+                        <androidx.cardview.widget.CardView
+                            style="@style/container_cardview"
+                            android:layout_width="wrap_content">
+
+                            <TextView
+                                android:id="@+id/detail_location"
+                                style="@style/textview_label"
+                                android:layout_margin="5dp" />
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                style="@style/container_cardview"
+                android:layout_below="@id/container1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/textview_label"
+                        android:text="@string/label_job_description"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/detail_description"
+                        style="@style/textview_label"
+                        android:layout_margin="5dp"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>
