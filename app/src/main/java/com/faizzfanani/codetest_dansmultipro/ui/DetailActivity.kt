@@ -5,6 +5,7 @@ package com.faizzfanani.codetest_dansmultipro.ui
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import com.faizzfanani.codetest_dansmultipro.R
 import com.faizzfanani.jobssdk.model.DataJobs
 import com.faizzfanani.jobssdk.presenter.JobsPresenter
@@ -37,7 +38,7 @@ class DetailActivity : AppCompatActivity(), IJobsView {
         detail_type.text = dataJobs.type
         detail_company.text = dataJobs.company
         detail_location.text = dataJobs.location
-        detail_description.text = dataJobs.description
+        detail_description.text = Html.fromHtml(dataJobs.description)
         loading.dismiss()
     }
 }
